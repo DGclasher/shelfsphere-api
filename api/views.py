@@ -66,12 +66,14 @@ class MemberDeleteView(generics.DestroyAPIView):
     permission_classes = [IsAuthenticated, IsMember]
 
     def get_object(self):
-        return self.request.user.member
+        member = get_object_or_404(Member, user=self.request.user)
+        return member
 
     def destroy(self, request, *args, **kwargs):
         instance = self.get_object()
         self.perform_destroy(instance)
         return Response({"message": "Account deleted successfully"})
+
 
 @api_view(['POST'])
 @permission_classes([IsMember, IsAuthenticated])
@@ -103,7 +105,6 @@ def borrow_books(request):
 
     except User.DoesNotExist:
         return Response({'message': 'User does not exist'})
-
 
 
 @api_view(['POST'])
