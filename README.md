@@ -4,6 +4,8 @@
 
 A simple Library Management System
 
+#### Get the complete documentation from [here](https://github.com/DGclasher/shelfsphere-api/raw/main/docs/library-management-system-docs-dg.pdf)
+
 ## Setup
 
 On the root directory of project, run
