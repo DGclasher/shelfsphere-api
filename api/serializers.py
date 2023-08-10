@@ -1,8 +1,6 @@
 from users.models import *
 from books.models import *
 from rest_framework import serializers
-from django.contrib.auth import get_user_model
-
 
 class BookSerializer(serializers.ModelSerializer):
     class Meta:

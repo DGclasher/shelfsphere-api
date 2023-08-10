@@ -1,17 +1,14 @@
-from .serializers import BorrowBooksSerializer  # Create this serializer
+import json
 from .serializers import *
 from .permissions import *
 from books.models import *
 from users.models import *
-import json
+from rest_framework import status
+from rest_framework import generics
+from rest_framework.response import Response
 from django.shortcuts import get_object_or_404
 from rest_framework.permissions import IsAuthenticated
-from rest_framework.views import APIView
-from rest_framework import status
-from rest_framework import generics, viewsets
-from rest_framework.decorators import action
-from rest_framework.response import Response
-from rest_framework.decorators import api_view, permission_classes, authentication_classes
+from rest_framework.decorators import api_view, permission_classes
 
 
 class BookListCreateView(generics.ListCreateAPIView):
