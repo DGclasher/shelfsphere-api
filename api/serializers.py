@@ -43,14 +43,6 @@ class BorrowBooksSerializer(serializers.Serializer):
     book_ids = serializers.ListField(child=serializers.IntegerField())
 
     def validate_book_ids(self, value):
-        # Add your custom validation logic here, if needed
         return value
-
-class UserSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = User
-        fields=('id')
-    def create(self, validated_data):
-        return User.objects.create(**validated_data)
 
 
