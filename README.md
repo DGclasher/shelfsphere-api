@@ -6,6 +6,8 @@ A simple Library Management System
 
 #### Get the complete documentation from [here](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/DGclasher/shelfsphere-api/blob/main/docs/library-management-system-docs-dg.pdf)
 
+#### Frontend Client : [shelfsphere](https://dgclasher.github.io/shelfsphere/) | [repo](https://github.com/DGclasher/shelfsphere)
+
 ## Setup
 
 On the root directory of project, run
